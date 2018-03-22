@@ -1,0 +1,35 @@
+{
+  "name": "node-red-contrib-calc-next-work-days",
+  "version": "0.0.2",
+  "description": "Сalculation of the following working days based on the holidays array",
+  "main": "calcnextworkdays.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/german-st/calcnextworkdays.git"
+  },
+  "keywords": [
+    "holiday",
+    "calculate",
+    "calculate working days",
+    "workdays",
+    "calc next work days",
+    "node-red"
+  ],
+  "author": "Roman Gerasimov (german-st@ya.ru)",
+  "license": "MIT",
+  "homepage": "https://github.com/german-st/calcnextworkdays#readme",
+  "node-red": {
+    "nodes": {
+      "calc-next-work-days": "calcworkdays.js"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/german-st/calcnextworkdays/issues"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
