@@ -44,19 +44,20 @@ The first element contains the calculated date
 The second element contains the day number relative to the primary date
 
 Example:
+
 `msg.workdays`  *array*
 
-   `0:`    *array*
-        `0: "2018-05-10T00:00:00.000Z"`  *calculated date*
-        `1: 1`   *number of day*  
+`0:`    *array*
+`0: "2018-05-10T00:00:00.000Z"`  *calculated date*
+`1: 1`   *number of day*  
 
-   `1:`    *array*
-        `0: "2018-05-11T00:00:00.000Z"`  *calculated date*
-        `1: 2`   *number of day*
-    
-   `2:`    *array*
-        `0: "2018-05-14T00:00:00.000Z"`  *calculated date*
-        `1: 3`   *number of day* 
+`1:`    *array*
+`0: "2018-05-11T00:00:00.000Z"`  *calculated date*
+`1: 2`   *number of day*  
+
+`2:`    *array*
+`0: "2018-05-14T00:00:00.000Z"`  *calculated date*
+`1: 3`   *number of day* 
 
 ### Details
 
