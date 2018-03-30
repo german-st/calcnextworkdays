@@ -5,7 +5,7 @@
 # README #
 Node for Node-RED.
 
-A simple node that calculates the next (or several) working day given the holidays and working days off.
+A simple node that calculates the next (or several) working day given the holidays and working weekends days.
 
 ### Install ###
 
@@ -13,29 +13,29 @@ Install latest release: `npm i -g node-red-contrib-calc-next-work-days`
 
 ### Inputs
 
-`msg.date` date
+`msg.date` *date*
 
-The start date for calculation(this day is counted as the first).
+The start date for calculation(this day is counted as the first). Pass by upstream mode.
 
-`msg.countworkdays` number
+`msg.countworkdays` *number*
 
-Number of working days to be calculated in result.You can specify in the configuration node or stream mode.
+Number of working days to be calculated in result. You can specify in the configuration node or passed by upstream mode.
 
-`msg.holidays` array
+`msg.holidays` *array*
 
 Array of dates with holidays
 
-`msg.workweekends` array
+`msg.workweekends` *array*
 
 Array of dates with working weekends days. Not required.
 
-`msg.typeweekend` string
+`msg.typeweekend` *string*
 
-Weekend type. You can specify in the configuration node or stream mode. `satsun`, `frisat` or `withoutweekends` values.
+Weekend type. You can specify in the configuration node or passed by upstream mode. `satsun`, `frisat` or `withoutweekends` values.
 
 ### Outputs
 
-`msg.workdays` array
+`msg.workdays` *Array of arrays*
 
 Result. Array of arrays the following working days.The count will be equal to `msg.countworkdays`
 
@@ -43,9 +43,20 @@ The first element contains the calculated date
 
 The second element contains the day number relative to the primary date
 
-`0: "2018-05-10T00:00:00.000Z"`
+Example:
+`msg.workdays`  *array*
 
-`1: 1`
+   `0:`    *array*
+        `0: "2018-05-10T00:00:00.000Z"`  *calculated date*
+        `1: 1`   *number of day*  
+
+   `1:`    *array*
+        `0: "2018-05-11T00:00:00.000Z"`  *calculated date*
+        `1: 2`   *number of day*
+    
+   `2:`    *array*
+        `0: "2018-05-14T00:00:00.000Z"`  *calculated date*
+        `1: 3`   *number of day* 
 
 ### Details
 

@@ -1,4 +1,4 @@
-var func = require('./functions.js');
+var func = require('./lib/functions.js');
 module.exports = function(RED) {
     function CalcWorkDays(config) {
         RED.nodes.createNode(this,config);
