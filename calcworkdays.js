@@ -60,8 +60,8 @@ module.exports = function(RED) {
                         var j=false;
                         while (j==false)
                             {
-                                //if (!(((firstdate.getDay()===fwek || firstdate.getDay()===swek) && !func.isHoliday(firstdate, workweekends)) || (firstdate.getDay()!==fwek && firstdate.getDay()!==swek && func.isHoliday(firstdate, holidays))))
-                                if (!(((moment(firstdate).get('date')===fwek || moment(firstdate).get('date')===swek) && !func.isHoliday(firstdate, workweekends)) || (moment(firstdate).get('date')!==fwek && moment(firstdate).get('date')!==swek && func.isHoliday(firstdate, holidays))))
+                                if (!(((firstdate.getDay()===fwek || firstdate.getDay()===swek) && !func.isHoliday(firstdate, workweekends)) || (firstdate.getDay()!==fwek && firstdate.getDay()!==swek && func.isHoliday(firstdate, holidays))))
+                                //if (!(((moment(firstdate).get('date')===fwek || moment(firstdate).get('date')===swek) && !func.isHoliday(firstdate, workweekends)) || (moment(firstdate).get('date')!==fwek && moment(firstdate).get('date')!==swek && func.isHoliday(firstdate, holidays))))
                                     {
                                         //results.push(new Date(firstdate));
                                         results.push(moment(firstdate));
