@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-calc-next-work-days",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Сalculation of the following working days based on the holidays array",
   "main": "calcnextworkdays.js",
   "scripts": {
