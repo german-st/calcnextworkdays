@@ -1,4 +1,6 @@
 var func = require('./lib/functions.js');
+var moment = require('moment');
+
 module.exports = function(RED) {
     function CalcWorkDays(config) {
         RED.nodes.createNode(this,config);
@@ -8,7 +10,8 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
 //-------------------------------------------
             //принимаем дату на вход
-            var tod = new Date(func.UTCdateToday(msg.date));
+            //var tod = new Date(func.UTCdateToday(msg.date));
+            var tod = new Date(moment.utc(msg.date));
 
             var holidays = []; //массив с праздничными днями
             holidays = msg.holidays;
@@ -57,9 +60,11 @@ module.exports = function(RED) {
                         var j=false;
                         while (j==false)
                             {
-                                if (!(((firstdate.getDay()===fwek || firstdate.getDay()===swek) && !func.isHoliday(firstdate, workweekends)) || (firstdate.getDay()!==fwek && firstdate.getDay()!==swek && func.isHoliday(firstdate, holidays))))
+                                //if (!(((firstdate.getDay()===fwek || firstdate.getDay()===swek) && !func.isHoliday(firstdate, workweekends)) || (firstdate.getDay()!==fwek && firstdate.getDay()!==swek && func.isHoliday(firstdate, holidays))))
+                                if (!(((moment(firstdate).get('date')===fwek || moment(firstdate).get('date')===swek) && !func.isHoliday(firstdate, workweekends)) || (moment(firstdate).get('date')!==fwek && moment(firstdate).get('date')!==swek && func.isHoliday(firstdate, holidays))))
                                     {
-                                        results.push(new Date(firstdate));
+                                        //results.push(new Date(firstdate));
+                                        results.push(moment(firstdate));
                                         j = true;
                                     }
                                 firstdate.setDate(firstdate.getDate()+1);
