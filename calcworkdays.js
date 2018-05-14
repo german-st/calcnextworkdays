@@ -1,5 +1,5 @@
 var func = require('./lib/functions.js');
-var moment = require('moment');// added monetjs library
+var moment = require('moment');// added moment.js library
 
 module.exports = function(RED) {
     function CalcWorkDays(config) {
