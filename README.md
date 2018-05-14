@@ -6,6 +6,7 @@
 Node for Node-RED.
 
 A simple node that calculates the next (or several) working day given the holidays and working weekends days.
+For calculates dates used [Moment.js](http://momentjs.com/)
 
 ### Install ###
 
